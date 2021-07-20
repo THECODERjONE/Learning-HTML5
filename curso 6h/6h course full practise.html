@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta name="description content=" content="Página enseñanza html5"/>
+	<meta name="keywords" content="html5, css3, Javascript, diseño web"/>
+
+	<title> no puedes ser tan manco </title>
+
+	<link rel="stylesheet" href="mihojadeestilos.css"/>
+
+	<style>
+		.parrafo-1{
+			color:red 
+		}
+		.manqueada{
+			color:blueviolet
+		}
+		.parrafo-2{
+			color:blue
+		}
+	</style>
+</head>
+<body>
+	<header>
+			<h1> No se puede ser así de lamenteibol <h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li>Dibuja</li>
+			<li>Colorea</li>
+			<li>Recorta</li>
+			<li>Construye</li>
+		</ul>
+	</nav>
+	<nav>
+		<p><a href="#No seas así">No seas así.</a></p>
+		<p><a href="#tags">tags</a></p>
+		<p><a href="jeje.html#hiddenjuju">juju</a></p>
+	</nav>
+	<main>
+		<aside>
+			<blockquote> Primera coleguita </blockquote>
+			<blockquote> Seconda coleguita </blockquote>
+			<blockquote> Tersera coleguita </blockquote>
+		</aside>
+
+		<section>
+			<article>
+				<header>
+					<hgroup>
+						<h2 id="No seas así">No seas así.</h2>
+						<h3>Por Favor.</h3>
+					</hgroup>
+				</header>
+					<p>Aquí contaremos las aventuras y desventuras del Mirlo Burlón. Obvio, como es un manco, hay más desventuras que aventuras.</p>
+					<p><b>Contexto histírico filosófico:</b></p>
+					<p>Moriremos todos.</p>
+				<footer>
+					Da lástima ahora, pero luego es peor todavía.
+				</footer>
+			</article>
+
+			<article>
+				<p class="parrafo-1"> Una vez en situación, se procede aquí con la exposición de hechos relevantes y desarrollo del personaje </p>
+				<p id="parrafo-2" data-ejemplo="Comentarios añadidos">El personaje añade comentarios.</p>
+				<p>Moriremos todos. Eso sigue siendo así.</p>
+			</article>
+
+			<article>
+				<p data-ejemplo>Luego nos ponemos a llorar y a quejarnos de lo que pudo y no fue.</p>
+				<p id="manqueada">Nuestro protagonista se queja de lo manco que es.</p>
+				<p title="Este es un ejemplo del attr  tittle">Moriremos todos. Eso sigue siendo así. Nada más que añadir.</p>
+
+				<script>
+					const p = document.getElementById("manqueada")
+					const parrafo2 = document.getElementById("parrafo-2")
+
+					console.log(parrafo2.dataset.ejemplo)
+					console.log(p.textContent)
+				</script>
+			</article>
+			<section><h1>Spoiler alert!</h1></section>
+				<section>Si procedes, es bajo tu responsabilidad</section>
+				<span><b><en>Sufre<en>; te quedas sin <u>nada</u> por <strong>perro.</strong></b></span>
+		</section>
+		<section id="tags">
+			<p><h3>Esta va a ser la sección de toquetear etiquetas varias.</h3>
+			</p>
+			<p>
+				4 elevado al cuadrado se representa de la forma siguiente con la etiqueta superíndice (sup):
+				4<sup>2</sup>
+			</p>
+			<p>
+				Aqui voy a poner una tontería con subíndice: Lomeada<sub>5</sub>
+			</p>
+			<p>
+				<h1>Aquí van links</h1>
+					<a href="/">Ir al inicio</a>
+					<a href="https://google.com">Glungle</a>
+					<a href="../mirloBurlon0.1.4.html">Juguemos al Mirlo Burlón</a>
+					<a href="jeje.html">jeje en pantalla</a>
+			</p>
+			<p>
+				<h1>Más Links todavía para otras prácticas</h1>
+					<a href="../mirloBurlon0.1.4.html" target="_blank">Mirlo Burlón <b>pestaña nueva.</b></a>
+					<a href="/mirloBurlon0.1.4.html" download> Descargar Mirlo Burlón</a>
+					<a href="/assets/images/greenlowrider.jpg" download>Lowrider descargar</a>
+			</p>
+		</section>
+	</main>
+
+	<footer>
+		<h6>Hay que ser manco para leerse todo esto, por dios.</h6>
+		<time><u>Siempre es tiempo de dársela de lomo.</u>  6/6/2006</time>
+	</footer>
+
+</body>
+</html>

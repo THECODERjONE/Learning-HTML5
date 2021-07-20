@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mirlo burlón v0.1.3</title>
+  </head>
+  <body>
+    <h1> abre la consola manco </h1>
+    <script type="text/javascript">
+      function getRandomBooleanWithProbability(probability = 50) {
+        return (Math.random() < (probability / 100))
+      }
+      function getRandomNumber(from_num = 1, to_num = 10) {
+        return Math.floor((Math.random() * to_num) + from_num);
+      }
+      function generateStringWithDots(str_length) {
+        let message = ''
+
+        for (var i = 0; i <= str_length; i++) {
+          message += '.'
+        }
+
+        return message
+      }
+      function mirloTryCanto(canto_num, base_canto_probability) {
+        const canto_probability = base_canto_probability + (10 * (canto_num - 1))
+        console.log(`Mirlo efectúa el canto ${canto_num}...`)
+        if (getRandomBooleanWithProbability(canto_probability)) {
+          mirloTryPicotasoArTobillo(canto_probability)
+        } else {
+          if (canto_num < 3) {
+            mirloTryCanto((canto_num + 1), base_canto_probability)
+          } else {
+            console.log('Canto failed, DE LOMOOOOOOOOO!')
+          }
+        }
+      }
+      function mirloTryPicotasoArTobillo(actual_canto_probability) {
+        console.log('Mirlo try picotasoArTobillo')
+        const picotaso_probability = (actual_canto_probability < 35) ? getRandomBooleanWithProbability(35) : getRandomBooleanWithProbability(20)
+        if (getRandomBooleanWithProbability(actual_canto_probability)) {
+          console.log('SANGRE confirmed')
+          const confirmamos_coleguita_fija = getRandomBooleanWithProbability()
+          if (confirmamos_coleguita_fija) {
+            console.log('OJOOOOO, la coleguita responde con otro canto')
+            console.log('The Mirlo arsarvuelo avec una chapita')
+            console.log('Coleguita conseguida')
+          } else {
+            console.log('Lomeada épica')
+          }
+        } else {
+          console.log('LOMO tu de asfalto')
+          console.log('Mirlo is `choporvo')
+        }
+      }
+      function checkForColeguitas() {
+        const max_time_spent_loking_today = getRandomNumber()
+        let time_passed_looking = 0
+
+        const intervalCheckForColeguitas = setInterval(() => {
+          console.log(generateStringWithDots(time_passed_looking++))
+          if (time_passed_looking === max_time_spent_loking_today) {
+            clearInterval(intervalCheckForColeguitas)
+            if (getRandomBooleanWithProbability()) {
+              const nivelColeguita = getRandomNumber()
+              console.log('Coleguita salvaje apareció.')
+              console.log('evaluando coleguita...')
+              console.log(`Coleguita de nivel ${nivelColeguita}!`)
+              if (nivelColeguita < 5) {
+                console.log('coleguita POSO, mirlo returned home')
+              } else if (nivelColeguita <= 7) {
+                console.log('se juega el partido')
+                mirloTryCanto(1, 25)
+              } else if (nivelColeguita <= 9) {
+                console.log('Mucha tela')
+                mirloTryCanto(1, 10)
+              } else if (nivelColeguita == 10) {
+                console.log('Mirlo monta el vuelo sin intentar nada (suelta carga de profundidad)')
+              }
+            } else {
+              console.log('Mirlo returned home')
+              console.log('No coleguitas found :(')
+            }
+          }
+        }, 100)
+      }
+
+      checkForColeguitas()
+
+    </script>
+
+  </body>
+</html>
